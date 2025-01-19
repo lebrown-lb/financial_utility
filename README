@@ -1,0 +1,10 @@
+pyuic4 ./finac_hist_util.ui -o ./xproclib/base_ui.py
+
+---------TO DO--------
+ - sort tab selected rows sum
+ - clear merchant table when sort table selection released
+ - catagorize tab
+ - sumarize tab
+ - right click add to catagory
+ - icon for app
+ - quit app / clear utility
