@@ -504,10 +504,11 @@ class Main(QtWidgets.QMainWindow, Ui_mainWindow):
         return
 
     def cat_kword_add(self):
-        for xc in self.ui.cat_table.selectionModel().selectedRows():
-            self.exp_cat[xc.row()].add_kwrd(self.ui.kword_le.text())
-            self.ui.kword_tb.setText(self.exp_cat[xc.row()].kwrds)
-        self.ui.kword_le.clear()
+        if len(self.ui.kword_le.text()):
+            for xc in self.ui.cat_table.selectionModel().selectedRows():
+                self.exp_cat[xc.row()].add_kwrd(self.ui.kword_le.text())
+                self.ui.kword_tb.setText(self.exp_cat[xc.row()].kwrds)
+            self.ui.kword_le.clear()
 
     def upd_exp_catgories(self):
         if (self.load_flg):

@@ -164,7 +164,7 @@ def prc_trans_exp_cat(uc_exps, xc_obj):
     tsm = 0
     tct = 0
     kwrds = xc_obj.kwrds.split(',')
-    kwrds[-1].rstrip('\r\n')
+    kwrds[-1] = kwrds[-1].rstrip()
 
     ce = []
     uce = uc_exps
